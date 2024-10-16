@@ -1,1 +1,1 @@
-https://github.com/ifeanyicyriacus/pythonClass.git
+print("hello dynamites, welcome to programming class with python")
