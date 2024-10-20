@@ -1,0 +1,21 @@
+python task:
+Step1:
+1. collect principal
+2. collect annual_interest_rate
+3. collect duration
+4. calculate monthly_payment
+
+step2:
+1. prompt the user to enter the amount the client wish to borrow
+2. collect and store as principal
+3. prompt the user to enter the yearly interest offered on the mortgage
+4. collect and store as annual_rate
+5. prompt the user to enter duration of mortgage in years
+6. collect and store as duration
+7. calculate annual_rate /(100 * 12)
+8. store value as monthly_rate
+9. calculate duration * 12
+10 store value as no_of_months
+11. calculate (principal * (monthly_rate * (1 + monthly_rate)**no_of_months)) / (((1 + monthly_rate)**no_of_months) - 1)
+12. store value as monthly_payment
+13. display the monthly_payment
