@@ -1,3 +1,5 @@
+#exercise 3.20 (Binary to Decimal conversion)
+
 binary_number = int(input("Enter Binary number: "))
 decimal_number = 0
 power = 0

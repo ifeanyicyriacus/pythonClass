@@ -8,5 +8,5 @@ point_y2 = float(input("Input the longititude of coordinate 2: "))
 
 distance = RADIUS_OF_EARTH * math.acos(math.sin(point_x1) * math.sin(point_x2) + math.cos(point_x1) * math.cos(point_x2) * math.cos(point_y1 - point_y2))
 
-printf(f"The distance between those points is: {distance}km\n")
+print(f"The distance between those points is: {distance}km")
 
