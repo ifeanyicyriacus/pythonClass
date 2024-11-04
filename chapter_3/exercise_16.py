@@ -14,7 +14,7 @@ for count in range(10):
         largest_1 = number
         continue
     elif count == 1 and largest_1 >= number:
-        largest_2 = temp = number
+        largest_2 = number
         continue
     
     if count >= 2:
