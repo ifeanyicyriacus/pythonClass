@@ -1,0 +1,13 @@
+5 4 3 2 1 
+4 3 2 1 
+3 2 1 
+2 1 
+1
+
+start counter from 5
+do the following while counter > 0:
+	number = counter
+	do the following {counter number of times}
+		print number
+		decrement number by 1
+	print a new line
