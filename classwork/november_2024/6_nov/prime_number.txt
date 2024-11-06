@@ -1,0 +1,11 @@
+"prime number"
+in the function, pass an argument (an integer number):
+	turn number to positive
+	for test_number in range (2 to number):
+		
+		if number % test_number == 0:
+			print("number is not a prime number ")
+			return False
+	return True since False was not returned
+	
+
