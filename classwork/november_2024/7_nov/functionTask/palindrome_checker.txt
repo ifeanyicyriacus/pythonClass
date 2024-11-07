@@ -1,0 +1,10 @@
+"""function to check if a string of text is a palindrome"
+
+define a function palindrome_checker(text): "helleh"
+	index = -1 *len(text)
+	for letter in text:
+		if letter != text[index]:
+			return False
+		index += 1
+	return True
+		

@@ -1,0 +1,13 @@
+"""function sum_of_multiples that takes two integer x and n and returns the sum of multiple of x to n"""
+if x is 3 and n is 10
+3x1 + 3x2 + 3x3 
+3 + 6 + 9 = 18
+
+define sum_of_multiples(x, n):
+	count = 1
+	sum = 0
+	while(x * count < n):
+		sum += (x * count)
+		counter += 1
+	return sum
+	

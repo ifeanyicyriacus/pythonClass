@@ -1,0 +1,10 @@
+collect the string
+create a vowel_counter variable
+itrate through the string
+if value has a, e, i, o, u
+increase the vowel_counter by 1
+return the number
+
+test it using a method call
+print out the output
+

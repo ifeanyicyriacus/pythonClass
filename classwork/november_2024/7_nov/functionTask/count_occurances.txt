@@ -1,0 +1,9 @@
+"function to count the occurance of a character in a string and returns how many times that character appears in the string (using loops) function has two parameter "
+
+create function count_occurances(keyword, text):
+	keyword_occurances = 0
+	for letter in text:
+		if keyword == letter:
+			increment keyword_occurances by 1
+	return keyword_occurances
+	

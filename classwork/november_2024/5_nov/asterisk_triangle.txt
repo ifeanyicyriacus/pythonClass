@@ -1,0 +1,11 @@
+*
+**
+***
+****
+*****
+row = 1
+do the following while row <= 6...
+	do the following {row} number of times:
+		print "*"
+	go to next line
+	increment row by 1

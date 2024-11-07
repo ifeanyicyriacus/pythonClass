@@ -1,0 +1,15 @@
+collect the string
+create a function acronym_in_text
+create variable acronym
+create a boolean variable previous_letter_is_a_whitespace
+iterate through the string one letter at a time:
+	check if previous_letter_is_a_whitespace:
+		add letter to acronym
+		set previous_letter_is_a_whitespace to False
+	check if letter == " ":
+		set previous_letter_is_a_whitespace to true
+return the acronym.upper()
+
+test it using a method call and "Portable Network Graphics"
+print out the output
+

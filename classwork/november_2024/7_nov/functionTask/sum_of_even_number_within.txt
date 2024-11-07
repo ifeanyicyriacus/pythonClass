@@ -1,0 +1,12 @@
+"""create a function that accepts an integer n and return the sum of all even number from from 1 to n"""
+
+create a function with an integer parameter:
+	create a variable sum
+	iterate through a range from 1 to the number:
+		if the number % 2 == 0:
+			increment sum by the number
+	return the sum
+
+
+test the function with number 10
+result is expected to be 20
