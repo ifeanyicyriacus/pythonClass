@@ -1,0 +1,45 @@
+divide_or_square:
+function that either return the square root or the remainder from division by 5 depending on user input
+create function divide_or_square that
+1. collects a number as input as argument
+2. if the number is divisible by 5:
+	a. return the square root of number
+   else:
+   	b. return the remainder of the number divided by 5
+handle negative number and non-integer
+
+
+future_investment_amount:
+function that takes in investment amount, monthly interest rate and year as parameter and dreturn future investment value
+1. collect investment_amount, monthly_interest_rate and year
+2. calculate year * 12
+3. store as number_of_months
+4. calculate investment_amount * (1 + monthly_interest_rate) ** number_of_months
+5. store as future_investment_amount
+6. return future_investment_amount
+
+
+only_floats:
+function that takes two arguments a and b, returns 2 if both arguments are floats, returns 1 if only one argument is float and returns 0 if neither argument is a float.
+1. collect a, b
+2. result = 0
+3. if type(a) is float:
+	a. increment result by 1
+4. if type(b) is float:
+	b. increment result by 1
+5. return result
+
+
+
+my_discount:
+function that accept two argument [price, discount], and return a value which is price less discount amount
+1. collect price and discount as argument
+2. calculate price * discount / 100
+3. store value as discount_amount
+4. calculate price - discount_amount
+5. store as my_discount
+6. return my_discount
+
+
+
+
