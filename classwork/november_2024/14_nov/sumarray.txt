@@ -1,0 +1,7 @@
+function to sum the numbers in a list
+
+total = 0
+function should accept a list as input
+for element in array
+	add to total
+	return total
