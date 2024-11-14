@@ -3,4 +3,3 @@ def get_summation(args:list = [])-> float:
     for number in args:
         sum += number
     return round(sum, 2)
-    

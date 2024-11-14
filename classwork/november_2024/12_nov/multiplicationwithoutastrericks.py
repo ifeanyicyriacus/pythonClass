@@ -29,5 +29,4 @@ def get_product(number_a, number_b = 1):
         return round(product, 2)
         
         
-    raise TypeError   
-    
+    raise TypeError    
