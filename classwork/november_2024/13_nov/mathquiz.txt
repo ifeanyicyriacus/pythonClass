@@ -1,0 +1,32 @@
+generate a random mathematics question with integer between 1-1000
+
+declare these variables: answer,question_generated, response, total
+
+do this 10 times:
+	random.rand(1,1001)
+	generate first operand
+	generate second operand
+	go through an array of ["+","+","+","+","+", "*","*","*", "-","-"]
+	create an array for question_generated
+	create an array of answer
+
+do these 10 times:
+	ask questions[i]
+	collect response[i]
+	if answer[i] == response[i]:
+		total += 1
+
+display result:
+	you got {total} of 10 question
+	
+if total <10:
+	do this 10 times:
+		if answer[i] != response[i]:
+			display "questiion [i] of 10"
+			display "You answered [responses[i]]"
+			display "the correct answer is: answers[i]"
+			"white space"
+		
+		
+
+
