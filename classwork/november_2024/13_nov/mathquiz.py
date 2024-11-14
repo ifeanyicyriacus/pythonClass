@@ -7,8 +7,8 @@ def quiz():
     total = 0
 
     for index in range(10):
-        first_operand = randrange(1, 11)
-        second_operand = randrange(1, 11) 
+        first_operand = randrange(1, 1001)
+        second_operand = randrange(1, 1001) 
         operator = ["+","+","+","+","+", "*","*","*", "-","-"]
         question = str(first_operand) + operator[index] + str(second_operand)
         if operator[index] == "+":
