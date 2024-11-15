@@ -1,0 +1,10 @@
+function to use the remove function to remove the 2nd element in a list then return the new list, or return the list as is if the array is less than 2 element
+
+create a function that accept a list parameter and return a list
+	
+	if length of the list is greater than or equal to 2
+		call the call the remove function on the array using a dot operator
+		pass in 1 as arguent to the function
+		return the result
+	else: 
+		return the list as is

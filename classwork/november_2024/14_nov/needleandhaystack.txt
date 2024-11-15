@@ -1,0 +1,23 @@
+haystake
+needle
+
+function that accept two argument haystack, needle
+haystack could be a list or a string
+needle should be a string
+
+result = ""
+if haystack is a string:
+	result = haystack.replace(needle, "")
+	
+else if haystack is a list:
+	for True:
+		if needle in haystack:
+			haystack.remove(needle)
+		else:
+			break;
+	if haystack has an blank element, remove it
+	return haystack
+else (neither list nor string)
+	value error
+
+
