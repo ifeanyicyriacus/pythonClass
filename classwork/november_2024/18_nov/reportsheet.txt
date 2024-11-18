@@ -1,0 +1,94 @@
+Step 1:
+fxn
+collect 10 student score on 4 subject
+collect names and scores
+only collect valid score (1-100)
+each offer 4 subject {python, Java, Data science, design thinking}
+
+get the best performing student in each of the subject
+get least performing student in each of the subject
+
+print the whole table of result
+	name,	python,	Java,	Data science,	design thinking
+1	sss		12		32		45				45
+2	.. ...
+
+index 0 name
+index 1 python
+index 2 java
+index 3 data science
+index 4 design thinking
+
+
+Step2:
+a multiple dimensional array 
+class_score_sheet = [
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+	["Emeka", 54, 90, 87, 66],
+]
+display_summary(class_score_sheet)
+
+
+best_student(list, subject_index)#let me not account for duplicate highest
+	has a name = [] variable
+	has a score = 0 variable
+	this loops through the list and checks if score < list[i][subject_index]:
+		let score = list[i][subject_index]
+		let name = [list[i][0]]
+	elif temp_score == list[i][subject_index]:
+		name.append(list[i][0])
+	return [name, score]
+	
+worst_student(list, subject_index)
+	has a name = [] variable
+	has a temp_score = 101 variable
+	
+	this loops through the list and checks if score > list[i][subject_index]:
+		let score = list[i][subject_index]
+		let name = [list[i][0]]
+	elif temp_score == current_score:
+		name.append(list[i][0])
+	return [name, score]
+
+display_summary(class_score_sheet)
+	subjects = ["Py", "Java", "DS", "DT"]
+	for index in range(1, 5):
+		result = best_student(list, index)
+		if len(result[0]) = 1:
+			print(f"Best student in {subjects[i-1]} is: [{result[0]}] - [{result[1]}]")
+		if len(result[0]) > 1:
+			names = ""
+			for name in result[0]:
+				names += name + ", "
+			print(f"Best students in {subjects[i-1]} are: [{names}] - [{result[1]}]")
+
+	for index in range(1, 5):
+		result = worst_student(list, index)
+		if len(result[0]) = 1:
+			print(f"Best student in {subjects[i-1]} is: [{result[0]}] - [{result[1]}]")
+		if len(result[0]) > 1:
+			names = ""
+			for name in result[0]:
+				names += name + ", "
+			print(f"Best students in {subjects[i-1]} are: [{names}] - [{result[1]}]")
+	
+
+display_table(class_score_sheet)
+	print()
+	print("Name\t\tPy\t\tJava\t\tDS\t\tDT")
+	for student_score_sheet in class_score_sheet
+		for element in student_score_sheet
+			print(element, end="\t")
+		print()
+		
+NB:
+if Array has number <= 0 or > 100:
+	return value Error
