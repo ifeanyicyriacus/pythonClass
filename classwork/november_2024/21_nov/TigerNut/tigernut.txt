@@ -1,0 +1,137 @@
+even adder
+collect a list of number and return the sum of all the even number
+sum = 0
+loop through the list
+	a. add the current element with sum if it is divisible by 2
+
+vowel_counter
+collect a string of text and return the number of vowel letter
+sum = 0
+make a list of vowels vowels = [a, e, i, o, u]
+
+anagram checker
+if their length are the same true else false
+remove all accurance of each letter from both list:
+	check is they are the same length
+	repeat this until either the length of one is zero (false)
+	or when both are zero (True)
+	
+
+prime number checker
+function takes a number
+loop from 2 to the number
+	divide the number by current value
+	if remainder == 0 return false
+after loop return true
+
+palidrome function
+check if letter is a palidrome
+
+
+reverse sting function
+collect string
+return string reversed
+
+get_average function
+return the average of a list of floating numbers
+
+capitalise function
+function to capitalise each first letter of a list of string
+and return new list
+loop through element and use the capatilise function
+store value to replace the original value
+
+duplicate checker
+collect a list of numbers and return true if it contains duplicate number
+loop through the list from indexA:first to second last:
+	loop through the list from indexB:indexA to length(list)
+		if list[indexA] == list[indexB]:
+			return True
+return False
+
+white_space_remover
+collect string
+replace all " " with ""
+return the new string
+
+intercept:------------
+collect two lists(list1 & list2) of number and return the element that are common
+result = []
+for element in list1:
+	if element in list2 and element not in result:
+		result.append(element)
+return result
+
+
+sum of product:----------------
+list = [1, 2, 3, 4]
+sum = 0
+product = 1
+for element in list
+	sum += element
+	product *= element
+return sum + product
+
+[1, 2, 3, 4]
+a = (1+2)+(2+3)+(3+4)
+b = (1*2)+(2*3)+(3*4)
+return a + b
+
+[1, 2, 3, 4, 5]
+a = (1+2)+(2+3)+(3+4)+(4+5)
+b = (1*2)+(2*3)+(3*4)+(4*5)
+return a + b
+
+sort_word_list_by_length
+sort the list of string by their length:
+word_list : ["apple", "cashews", "cherry"]
+Output: ["apple", "cherry", "cashews"]
+
+for counter1 from 0 to len(word_list)
+	for counter2 from counter1+1 to len(word_list)
+		if word_list[counter1] <= word_list[counter2]
+			continue
+		else
+			temp = word_list[counter2]
+			word_list[counter2] = word_list[counter1]
+			word_list[counter1] = temp
+			set counter2 = 0
+
+
+number_factorial
+product = 1
+for number in range(number)
+	product *= number
+return product
+
+sum_of_number_digit
+collect number and return the sum of its digit
+total = 0
+for number_str in str(number):
+	total += int(number_str)
+return total
+
+sum_of_odd_digit
+collect the number
+total
+for each digit in number
+	if digit % 2 != 0:
+	 total += digit
+
+function to collect the two arrays
+merge
+then sort
+
+
+return acromnomy of a text 
+function accept i argument
+split it by " " delimiter
+
+
+#extra task
+function:
+that take a list [a,b,c,d]
+loop through list but ignore the current index
+	add each elements
+	
+
