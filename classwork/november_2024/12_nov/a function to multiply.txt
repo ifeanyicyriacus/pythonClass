@@ -1,0 +1,37 @@
+a function to multiply two number passed into it without using the * operator
+
+collect first number
+store as number_1
+collect second number
+store as number_2
+product
+
+add number_1 to sum {number_2} times
+
+2,3
+2+2+2
+
+return sum
+
+accounting for float in second parameter of unknown length
+power = 1
+convert number_2 to string
+	split them by delimiter "."
+	a = whole number
+	b = decimal number
+
+33.453
+a= 3
+b = 453 >> len >> 3
+concatinate {a} and {b} >> 33453
+c = 33453
+increase number_1 {int(c)} number of times
+store as sum
+divide sum by 10 {len(b)} number of times
+store product
+
+return product
+
+
+
+
