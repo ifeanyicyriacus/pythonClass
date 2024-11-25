@@ -1,0 +1,32 @@
+1.
+take two argument
+integer array (a) and integer (b)
+
+the program performs b number of times
+	plucking the first
+	appending value to end
+	
+return the array
+
+2. 
+split a list in half into two
+if even : two equal length list
+if odd : the first list longer by 1 than the second list
+
+divide the length of the list by 2
+create a newList
+sreate a temporary list
+
+if length % 2 == 0
+	newList.append(old_list[:length//2])
+	newlist.append(old_list[length//2:])
+else
+	newList.append(old_list[:(length//2)+1])
+	newlist.append(old_list[(length//2)+1:])
+return newList
+	
+3. collect a list of numbers
+print wether the elements are even
+return a boolean list that represent the original array
+
+
