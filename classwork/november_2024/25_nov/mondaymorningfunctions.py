@@ -19,7 +19,6 @@ def split_in_half(int_list:list) -> list:
 
 def check_if_list_are_even(int_list:list) -> list:
     boolean_list = []
-    index = 0
     for number in int_list:
         boolean_list.append(True if (number % 2 == 0) else False)
     return boolean_list
