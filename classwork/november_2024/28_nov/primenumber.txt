@@ -1,0 +1,8 @@
+pseudocode to get prime numbers before a particular number (eg: 20)
+
+test 2 of 20 with 2
+test 3 of 20 with 2, 3
+test 4 of 20 with 2, 3, 4
+
+for numbers (value) below 20: from 2 - 20: 
+	if number % value
