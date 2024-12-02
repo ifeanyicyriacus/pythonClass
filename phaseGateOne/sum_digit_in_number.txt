@@ -1,0 +1,5 @@
+collect user input 
+validate it is correct
+convert to string list
+loop through list
+sum the list

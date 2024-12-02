@@ -1,0 +1,7 @@
+create an empth array
+prompt user to enter three integer
+if user input is invalid repeat
+sort using sorted
+display them in increasing order
+output 1, 3, 6
+
