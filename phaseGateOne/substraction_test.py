@@ -20,7 +20,7 @@ while counter < len(operands_list):
     r_operand = operands_list[counter][0]
     l_operand = operands_list[counter][1]
     
-    answer = input(f"Ques{counter+1}. What is {r_operand} - {l_operand}? ")
+    answer = input(f"Ques{counter+1:>2}. What is {r_operand:>2} - {l_operand:>2}? ")
     if answer.isdigit():
         answer = int(answer)
     else:
