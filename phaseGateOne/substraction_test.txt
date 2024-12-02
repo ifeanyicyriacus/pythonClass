@@ -1,0 +1,23 @@
+import time
+generate sibstraction problem
+create score_counter = 0
+operands_list
+loop 10 times:
+	generate r_operand (1 - 50)
+	generate r_operand (1 - 50)
+	if r_operand >= l_operand:
+		store both operands in array using ,append (r_operand, l_operand)
+
+#begin quiz:
+start_time = time.time()
+for operands in operands_list:
+	answer = int(input(f"What is {operands[0]} - {operands[1]}? "))
+	if answer == (operands[0]} - {operands[1]):
+		score_counter += 1
+
+stop_timer = time.time()
+time_taken = stop_timer - start_timer
+print result:
+f"you got {score_counter} question correctly"
+
+f"You spent a total of {time_taken:.0f} seconds, taking the test."
