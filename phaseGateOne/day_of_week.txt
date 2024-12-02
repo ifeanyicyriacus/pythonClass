@@ -1,0 +1,15 @@
+prompt user to enter integer from (0 - 6) for Sunday to Saturday
+prompt the user to enter the number of days after today
+display the future day of week
+
+DAYS_OF_WEEK = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", SATURDAY"]
+today = enter today's day: 1
+"You just selected DAYS_OF_WEEK[today]"
+enter the number of days elapsed since today: 3
+"The future day is {Thursday}"
+
+total = 1+3 = 4
+future_day = DAYS_OF_WEEK[total % 6]
+
+
+
