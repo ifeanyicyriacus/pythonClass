@@ -1,0 +1,5 @@
+use random module  two integer from 1 to 100
+	prompt use to wntter the sum
+	if user is correct
+		prompt true
+	else false
