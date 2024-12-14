@@ -21,4 +21,4 @@ while(True):
 
 total = today_day + future_day
 
-print(f"The future day is on {DAYS_OF_WEEK[total%6]} ")
+print(f"The future day is on {DAYS_OF_WEEK[total % 7]} ")
