@@ -7,7 +7,7 @@ class TestEntryClass(TestCase):
         Entry
     
     def test_that_entry_constructor_creates_a_new_entry(self):
-        entry_count_before_instantiation = Entry._entry_count
+        entry_count_before_instantiation = Entry.entry_count()
         new_entry_subject = "Dec 15 entry"
         new_entry_body = "They sent the wrong santa to Semicolon, he comes bearing snacks :)"
         new_entry = Entry(new_entry_subject, new_entry_body)
@@ -15,7 +15,7 @@ class TestEntryClass(TestCase):
         self.assertEqual(new_entry.ID, (entry_count_before_instantiation + 1));
         self.assertEqual(new_entry.entry_subject, new_entry_subject);
         self.assertEqual(new_entry.entry_body, new_entry_body);
-        self.assertEqual(new_entry.entry_count(), (entry_count_before_instantiation + 1));
+        self.assertEqual(Entry.entry_count(), (entry_count_before_instantiation + 1));
         
 
 class TestDiaryClass(TestCase):
@@ -23,12 +23,12 @@ class TestDiaryClass(TestCase):
         Diary
         
     def test_diary_constructor_creates_a_new_diary(self):
-        diary_count_before_instantiation = Diary._diary_count
+        diary_count_before_instantiation = Diary.diary_count()
         diary_name = "Business"
         new_diary = Diary(diary_name)
         self.assertEqual(new_diary.name, diary_name)
         self.assertEqual(new_diary.entries, [])
-        self.assertEqual(new_diary.diary_count, diary_count_before_instantiation + 1)
+        self.assertEqual(Diary.diary_count(), diary_count_before_instantiation + 1)
         
     def test_that_you_can_not_add_to_entry_when_diary_is_locked(self):
         diary_name = "Personal Reflection"
@@ -56,6 +56,22 @@ class TestDiaryClass(TestCase):
         actual_2 = new_diary.add_entry("Computer Science", "It all boils down to zeros(0) and Ones(1)")
         expected_1 = new_diary.find_entry_by_id(actual_1.ID)
         expected_2 = new_diary.find_entry_by_id(actual_2.ID)
-        
         self.assertEqual(actual_1, expected_1)
         self.assertEqual(actual_2, expected_2)
+        
+    def test_that_delete_entry_function_works(self):
+        diary_name = "Joke Collection"
+        new_diary = Diary(diary_name)
+        new_diary.is_locked = False
+        entry1 = new_diary.add_entry("Kevin Hart", "JUMANJI Director cut")
+        entry2 = new_diary.add_entry("Chris Rock", "Everybody loves Chris")
+        no_of_entries_before_deletion = len(new_diary.entries)
+        
+        new_diary.delete_entry(new_diary.find_entry_by_id(entry1.ID))
+        new_diary.delete_entry(new_diary.find_entry_by_id(entry2.ID))
+        no_of_entries_after_deletion = len(new_diary.entries)
+        
+        self.assertNotEqual(no_of_entries_before_deletion, no_of_entries_after_deletion)
+        self.assertEqual((no_of_entries_before_deletion - 2), no_of_entries_after_deletion)
+        
+        

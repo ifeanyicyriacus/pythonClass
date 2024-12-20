@@ -10,9 +10,10 @@ class Entry:
         
         self.entry_subject = entry_subject
         self.entry_body = entry_body
-        
-    def entry_count(self) -> int:
-        return self._entry_count
+    
+
+    def entry_count() -> int:
+        return Entry._entry_count
         
     @property
     def ID(self) -> int:
