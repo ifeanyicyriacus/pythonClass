@@ -4,27 +4,22 @@ class Entry:
     _entry_count = 0
     
     def __init__(self, entry_subject:str, entry_body:str):
-        self.entry_count += 1
-        self._ID = self.entry_count
+        Entry._entry_count += 1
+        self._ID = Entry._entry_count
         self._timestamp = datetime.now()
         
         self.entry_subject = entry_subject
         self.entry_body = entry_body
         
-    @property
     def entry_count(self) -> int:
         return self._entry_count
-    
-    @entry_count.setter
-    def entry_count(self, entry_count:int) -> None:
-        self._entry_count = entry_count
         
     @property
     def ID(self) -> int:
         return self._ID
     
     @property
-    def entry_subject(self) ->str :
+    def entry_subject(self) -> str :
         return self._entry_subject
     
     @entry_subject.setter

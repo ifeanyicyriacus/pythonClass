@@ -15,7 +15,7 @@ class TestEntryClass(TestCase):
         self.assertEqual(new_entry.ID, (entry_count_before_instantiation + 1));
         self.assertEqual(new_entry.entry_subject, new_entry_subject);
         self.assertEqual(new_entry.entry_body, new_entry_body);
-        self.assertEqual(new_entry.entry_count, (entry_count_before_instantiation + 1));
+        self.assertEqual(new_entry.entry_count(), (entry_count_before_instantiation + 1));
         
 
 class TestDiaryClass(TestCase):
@@ -50,6 +50,12 @@ class TestDiaryClass(TestCase):
         
     def test_that_find_entry_by_id_returns_correct_value(self):
         diary_name = "Dietel Old Testament"
+        new_diary = Diary(diary_name)
+        new_diary.is_locked = False
+        actual_1 = new_diary.add_entry("Mathematics", "What you cant measure dont exist")
+        actual_2 = new_diary.add_entry("Computer Science", "It all boils down to zeros(0) and Ones(1)")
+        expected_1 = new_diary.find_entry_by_id(actual_1.ID)
+        expected_2 = new_diary.find_entry_by_id(actual_2.ID)
         
-        
-
+        self.assertEqual(actual_1, expected_1)
+        self.assertEqual(actual_2, expected_2)

@@ -51,7 +51,13 @@ class Diary:
             self.entries = entries
             return new_entry
             
+    def find_entry_by_id(self, ID:int) -> Entry:
+        for entry in self.entries:
+            if entry.ID == ID:
+                return entry
+        return None
             
+    
             
         
     def __str__(self) -> str:

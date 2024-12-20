@@ -1,19 +1,11 @@
 def even_adder(list_of_numbers : list):
-    sum = 0
-    for number in list_of_numbers:
-        if number % 2 == 0:
-            sum += number
-    return sum
+    return sum([number for number in list_of_numbers if number % 2 == 0])
     
     
 def vowel_counter(text : str) -> int:
-    sum = 0
     vowels = ["a", "e", "i", "o", "u"]
     text = text.lower()
-    for letter in text:
-        if letter in vowels:
-            sum += 1
-    return sum
+    return sum([1 if (letter in vowels) else 0 for letter in text])
 
 def anagram_checker(text1 : str, text2 : str) -> bool:
     text1 = text1.lower()
