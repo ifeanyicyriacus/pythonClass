@@ -74,4 +74,14 @@ class TestDiaryClass(TestCase):
         self.assertNotEqual(no_of_entries_before_deletion, no_of_entries_after_deletion)
         self.assertEqual((no_of_entries_before_deletion - 2), no_of_entries_after_deletion)
         
+    def test_that_update_entry_return_correct_value(self):
+        diary_name = "Favourite Movies"
+        new_diary = Diary(diary_name)
+        new_diary.is_locked = False
         
+        entry_1 = new_diary.add_entry("Christmas movie", "It's A Wonderful Life")
+        self.assertEqual(entry_1.entry_body, "It's A Wonderful Life")
+        updated_entry_1 = new_diary.update_entry(entry_1, "Christmas movie", "Die Hard")
+        
+        self.assertEqual(entry_1, updated_entry_1)
+        self.assertEqual(entry_1.entry_body, "Die Hard")

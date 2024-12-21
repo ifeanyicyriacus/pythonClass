@@ -58,9 +58,12 @@ class Diary:
         entries = self.entries
         entries.remove(entry)
     
-    
-
-            
+    def update_entry(self, entry:Entry, entry_subject:str, entry_body:str) -> Entry:
+        entries = self.entries
+        index = entries.index(entry)
+        entries[index].entry_subject = entry_subject
+        entries[index].entry_body = entry_body
+        return entries[index]
         
     def __str__(self) -> str:
         size = len(self.entries)
