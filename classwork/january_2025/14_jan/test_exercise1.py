@@ -23,5 +23,18 @@ class TestFilterBetween20And50Function(TestCase):
         expected = [21, 50]
         self.assertEqual(actual, expected)
 
-# if __name__ == '__main__':
-#     unittest.main()
+class TestStudentScoresToGradesFunction(TestCase):
+    def test_that_student_scores_to_grades_return_correct_value(self):
+        student_scores = {'Gloria': 88,
+                          'Divine': 78,
+                          'Esther': 65,
+                          'Mercy': 75,
+                          'Uzo': 71}
+        actual = student_scores_to_grades(student_scores)
+        expected = {
+            'Gloria': "Exceeds Expectations",
+            'Divine': "Acceptable",
+            'Esther': "Fail",
+            'Mercy': "Acceptable",
+            'Uzo': "Acceptable"}
+        self.assertEqual(actual, expected)
