@@ -1,6 +1,6 @@
-import math
-from typing import Any
+# Recap of List, Dictionary, list comprehension and testing
 
+import math
 
 def parse_even_digit(text:str) -> list:
     return [x for x in list([int(x) for x in text if x.isdigit()]) if x % 2 == 0]
@@ -13,7 +13,6 @@ def filter_between_20_and_50(numbers:list) -> list:
 
 def student_scores_to_grades(student_scores:dict) -> dict:
     return {key: get_grade(value) for key, value in student_scores.items()}
-
 
 def get_grade(grade:int) -> str:
     if 90 < grade < 100:
@@ -28,10 +27,6 @@ def get_grade(grade:int) -> str:
         return "Invalid score, only 0 - 100 supported"
 
 def cohort_detail_zipper(list1, list2):
-    # dictionary = {}
-    # for key, value in zip(list1, list2):
-    #     dictionary[key] = value
-    # return dictionary
     return dict(zip(list1, list2))
 
 def complex_dictionary(school_records:dict) -> list:
@@ -41,32 +36,6 @@ def complex_dictionary(school_records:dict) -> list:
    ]
 
 def calculate_average_math_score (student_scores:dict) -> float:
-    school_records = {
-        "class_1": {
-            "students": [
-                {
-                    "name": "Harry",
-                    "scores": {"Math": 88, "English": 76}
-                },
-                {
-                    "name": "Solomon",
-                    "scores": {"Math": 95, "English": 89}
-                }
-            ]
-        },
-        "class_2": {
-            "students": [
-                {
-                    "name": "Daniel",
-                    "scores": {"Math": 78, "English": 72}
-                },
-                {
-                    "name": "Samuel",
-                    "scores": {"Math": 85, "English": 80}
-                }
-            ]
-        }
-    }
     total = 0
     number_of_students = 0
     for classes in student_scores.values():
@@ -74,15 +43,3 @@ def calculate_average_math_score (student_scores:dict) -> float:
             total += students["scores"]["Math"]
             number_of_students += 1
     return total / number_of_students
-
-
-
-
-
-
-
-
-
-
-
-
