@@ -38,3 +38,78 @@ class TestStudentScoresToGradesFunction(TestCase):
             'Mercy': "Acceptable",
             'Uzo': "Acceptable"}
         self.assertEqual(actual, expected)
+
+class TestCohortDetailZipperFunction(TestCase):
+    def test_that_cohort_detail_zipper_return_correct_value(self):
+        list1 = ["cohort24", "cohort23", "cohort22"]
+        list2 = ["4 months", "5 months", "6 months"]
+        actual = cohort_detail_zipper(list1, list2)
+        expected = {
+            "cohort24" : "4 months",
+            "cohort23": "5 months",
+            "cohort22": "6 months"
+        }
+        self.assertEqual(actual, expected)
+
+class TestComplexDictionaryFunction(TestCase):
+    def test_that_complex_dictionary_return_correct_value(self):
+        school_records = {
+            "class_1":{
+                "students": [
+                    {
+                        "name": "Harry",
+                        "scores": {"Math": 88, "English": 76}
+                     },
+                    {
+                        "name": "Solomon",
+                        "scores": {"Math": 95, "English": 89}
+                    }
+                ]
+            },
+            "class_2":{
+                "students": [
+                    {
+                        "name": "Daniel",
+                        "scores": {"Math": 78, "English": 72}
+                    },
+                    {
+                        "name": "Samuel",
+                        "scores": {"Math": 85, "English": 80}
+                    }
+                ]
+            }
+        }
+        actual = complex_dictionary(school_records)
+        expected = ["Samuel", {"Math": 85, "English": 80}]
+        self.assertEqual(actual, expected)
+
+    def test_that_calculate_average_math_score_return_correct_value(self):
+        school_records = {
+            "class_1":{
+                "students": [
+                    {
+                        "name": "Harry",
+                        "scores": {"Math": 88, "English": 76}
+                     },
+                    {
+                        "name": "Solomon",
+                        "scores": {"Math": 95, "English": 89}
+                    }
+                ]
+            },
+            "class_2":{
+                "students": [
+                    {
+                        "name": "Daniel",
+                        "scores": {"Math": 78, "English": 72}
+                    },
+                    {
+                        "name": "Samuel",
+                        "scores": {"Math": 85, "English": 80}
+                    }
+                ]
+            }
+        }
+        actual = calculate_average_math_score(school_records)
+        expected = 86.5
+        self.assertEqual(actual, expected)
