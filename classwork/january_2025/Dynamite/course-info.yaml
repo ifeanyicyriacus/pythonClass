@@ -1,0 +1,8 @@
+type: marketplace
+title: Dynamite
+language: English
+programming_language: Python
+environment: unittest
+content:
+  - lesson1
+yaml_version: 1
