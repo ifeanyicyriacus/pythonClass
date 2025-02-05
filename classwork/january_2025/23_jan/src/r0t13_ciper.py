@@ -23,3 +23,12 @@ def encrypt_text(text:str) -> str:
         else:
             result += letter
     return result
+
+# def decrypt_text(text:str) -> str:
+#     result = ""
+#     for letter in text:
+#         if letter.isalpha():
+#             result += shift_alphabet(letter, (26 - 13))
+#         else:
+#             result += letter
+#     return result
