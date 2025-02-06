@@ -40,6 +40,12 @@ class TV:
     def increase_volume(self):
         if not self._is_on:
             raise StateException('TV is not turned on')
-        # raise warning alert
+        # raise warning sound alert
         if self.volume_level < 100:
             self.volume_level += 1
+
+    def decrease_volume(self):
+        if not self._is_on:
+            raise StateException('TV is not turned on')
+        if self.volume_level > 0:
+            self.volume_level -= 1

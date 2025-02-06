@@ -32,10 +32,26 @@ class MyTestCase(TestCase):
         self.tv.increase_volume()
         self.assertEqual(3, self.tv.volume_level)
 
-
     def test_tv_volume_can_not_increase_beyond_100_percent(self):
+        self.tv.turn_on()
         self.assertEqual(0, self.tv.volume_level)
         for i in range(150):
             self.tv.increase_volume()
         self.assertEqual(100, self.tv.volume_level)
+
+    def test_tv_volume_can_be_decrease_only_when_turned_on(self):
+        self.tv.turn_on()
+        for i in range(10):
+            self.tv.increase_volume()
+        self.assertEqual(10, self.tv.volume_level)
+        self.tv.turn_off()
+        self.assertRaises(StateException, self.tv.decrease_volume)
+        self.tv.turn_on()
+        self.assertTrue(self.tv.is_on)
+        self.tv.decrease_volume()
+        self.assertEqual(9, self.tv.volume_level)
+        self.tv.decrease_volume()
+        self.tv.decrease_volume()
+        self.assertEqual(7, self.tv.volume_level)
+
 
