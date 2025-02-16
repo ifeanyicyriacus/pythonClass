@@ -1,7 +1,7 @@
-from enums.nigeria_state_and_zone import NigeriaStateGeoPoliticalZones as ng_state_geo_pol_zones
+from src.enums.nigeria_state_and_zone import NigeriaStateGeoPoliticalZones as NgStateGeoPolZones
 
-def get_geo_political_zone_by_state(state_name:str) -> ng_state_geo_pol_zones:
-    for zone in ng_state_geo_pol_zones:
+def get_geo_political_zone_by_state(state_name:str) -> NgStateGeoPolZones:
+    for zone in NgStateGeoPolZones:
         for state in zone.value:
             if state.lower() == state_name.lower():
                 return zone
