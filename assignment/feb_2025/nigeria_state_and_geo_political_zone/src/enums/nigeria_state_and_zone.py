@@ -11,10 +11,6 @@ class NigeriaStateGeoPoliticalZones(Enum):
     def __init__(self, *states:str):
         self.__states = states
 
-    @property
-    def states(self) -> tuple:
-        return self.__states
-
     def __str__(self):
         return (self.name
                 .title()
