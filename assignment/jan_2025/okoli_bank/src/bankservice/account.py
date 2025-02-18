@@ -5,6 +5,20 @@ class Account:
         self.first_name = first_name
         self.last_name = last_name
         self._pin = pin
+        self._balance = 0
+
+    @property
+    def _balance(self):
+        return self.__balance
+
+    @_balance.setter
+    def _balance(self, value):
+        self.__balance = value
+
+    def check_balance(self, pin):
+        if self._confirm_pin(pin):
+            return self._balance
+        else: raise ValueError('Pin is incorrect')
 
     @property
     def first_name(self) -> str:
@@ -63,3 +77,10 @@ class Account:
 
     def _confirm_pin(self, pin) -> bool:
         return self._pin == pin
+
+    def update_pin(self, old_pin:str, new_pin:str):
+        if new_pin is None or new_pin == '':
+            raise ValueError('New pin field cannot be empty')
+        if self._confirm_pin(old_pin):
+            self._pin = new_pin
+        else: raise ValueError('Current pin is incorrect')

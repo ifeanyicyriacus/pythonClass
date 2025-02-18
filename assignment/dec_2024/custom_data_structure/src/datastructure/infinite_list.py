@@ -29,3 +29,8 @@ class InfiniteList(InfiniteCollection):
     def get(self, index:int) -> object:
         return self.collection[index]
 
+    def add(self, element:object) -> None:
+        self.collection += [element]
+
+    def replace(self, index:int, element:object) -> None:
+        self.collection[index] = element

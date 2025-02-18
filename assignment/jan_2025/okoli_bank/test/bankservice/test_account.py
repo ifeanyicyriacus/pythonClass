@@ -3,6 +3,7 @@ from src.bankservice.account import Account
 
 class AccountTest(TestCase):
     correct_pin = "0000"
+    updated_pin = "2222"
     wrong_pin = "1111"
     first_name = "first_name"
     updated_first_name = "updated_first_name"
@@ -36,4 +37,36 @@ class AccountTest(TestCase):
         self.assertEqual(self.last_name, self.bank_account.last_name)
         self.bank_account.last_name = self.updated_last_name
         self.assertEqual(self.updated_last_name, self.bank_account.last_name)
+
+    def test_account_raises_error_when_manipulating_profile_detail_using_incorrectPin(self):
+        self.assertEqual(self.first_name, self.bank_account.first_name)
+        self.assertRaises(ValueError, self.bank_account.update_first_name, self.updated_first_name, self.wrong_pin)
+        self.assertEqual(self.first_name, self.bank_account.first_name)
+
+        self.assertEqual(self.last_name, self.bank_account.last_name)
+        self.assertRaises(ValueError, self.bank_account.update_last_name, self.updated_last_name, self.wrong_pin)
+        self.assertEqual(self.last_name, self.bank_account.last_name)
+
+    def test_account_balance_is_initialized_to_zero(self):
+        self.assertEqual(self.ZERO, self.bank_account.check_balance(self.correct_pin))
+
+    def test_account_pin_can_not_be_updated_when_the_old_pin_is_incorrect(self):
+        self.assertRaises(ValueError, self.bank_account.update_pin, self.wrong_pin, self.updated_pin)
+
+    def test_account_pin_can_be_updated_when_correct_pin_is_given(self):
+        self.assertEqual(self.ZERO, self.bank_account.check_balance(self.correct_pin))
+        self.assertRaises(ValueError, self.bank_account.check_balance, self.updated_pin)
+        self.bank_account.update_pin(self.correct_pin, self.updated_pin)
+        self.assertRaises(ValueError, self.bank_account.check_balance, self.correct_pin)
+        self.assertEqual(self.ZERO, self.bank_account.check_balance(self.updated_pin))
+
+#     test_account_cannot_check_balance_when_pin_is_correct
+#     account support deposit
+#       throwExceptionForInvalidDepositAmount
+#       support withdrawal
+#       throw exception for invalid withdraw amount
+#   throw exception for withdraw using incorrect pin
+
+
+
 
