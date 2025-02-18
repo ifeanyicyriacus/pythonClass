@@ -8,9 +8,6 @@ class NigeriaStateGeoPoliticalZones(Enum):
     SOUTH_SOUTH = "Akwa-Ibom", "Bayelsa", "Cross-River", "Delta", "Edo", "Rivers"
     SOUTH_WEST = "Ekiti", "Lagos", "Osun", "Ondo", "Ogun", "Oyo"
 
-    def __init__(self, *states:str):
-        self.__states = states
-
     def __str__(self):
         return (self.name
                 .title()
