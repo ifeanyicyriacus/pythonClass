@@ -88,10 +88,7 @@ class AccountTest(TestCase):
         self.assertRaises(ValueError, self.bank_account.withdraw, 100_000, self.correct_pin)
         self.assertEqual(50_000, self.bank_account.check_balance(self.correct_pin))
 
-
-
-#   throw exception for withdraw using incorrect pin
-
-
-
-
+    def test_account_raisesException_for_withdrawal_with_incorrect_pin(self):
+        self.bank_account.deposit(10_000)
+        self.assertRaises(ValueError, self.bank_account.withdraw, 1_300, self.wrong_pin)
+        self.assertEqual(10_000, self.bank_account.check_balance(self.correct_pin))
