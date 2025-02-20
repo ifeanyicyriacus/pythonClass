@@ -84,3 +84,14 @@ class Account:
         if self._confirm_pin(old_pin):
             self._pin = new_pin
         else: raise ValueError('Current pin is incorrect')
+
+    def deposit(self, amount:float):
+        if amount < 0: raise ValueError('Amount cannot be negative')
+        self._balance += amount
+
+    def withdraw(self, amount:float, pin:str):
+        if amount < 0: raise ValueError('Amount cannot be negative')
+        if amount > self._balance: raise ValueError('Amount cannot be greater than balance')
+        self._balance -= amount
+
+

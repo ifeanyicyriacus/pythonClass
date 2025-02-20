@@ -60,11 +60,36 @@ class AccountTest(TestCase):
         self.assertRaises(ValueError, self.bank_account.check_balance, self.correct_pin)
         self.assertEqual(self.ZERO, self.bank_account.check_balance(self.updated_pin))
 
-#     test_account_cannot_check_balance_when_pin_is_correct
-#     account support deposit
-#       throwExceptionForInvalidDepositAmount
-#       support withdrawal
-#       throw exception for invalid withdraw amount
+    def test_account_can_only_check_balance_when_pin_is_correct(self):
+        self.assertRaises(ValueError, self.bank_account.check_balance, self.wrong_pin)
+        self.assertEqual(self.ZERO, self.bank_account.check_balance(self.correct_pin))
+
+    def test_account_support_balance_increase(self):
+        self.bank_account.deposit(30_000)
+        self.assertEqual(30_000, self.bank_account.check_balance(self.correct_pin))
+        self.bank_account.deposit(300)
+        self.bank_account.deposit(400)
+        self.assertEqual(30_700, self.bank_account.check_balance(self.correct_pin))
+
+    def test_account_raises_exception_for_invalid_increase_amount(self):
+        self.assertRaises(ValueError, self.bank_account.deposit, -300)
+        self.assertEqual(0, self.bank_account.check_balance(self.correct_pin))
+
+    def test_account_supports_withdrawal(self):
+        self.bank_account.deposit(30_000)
+        self.assertEqual(30_000, self.bank_account.check_balance(self.correct_pin))
+        self.bank_account.withdraw(10_000, self.correct_pin)
+        self.assertEqual(20_000, self.bank_account.check_balance(self.correct_pin))
+
+    def test_account_raises_exception_for_invalid_withdrawal_amount(self):
+        self.bank_account.deposit(50_000)
+        self.assertEqual(50_000, self.bank_account.check_balance(self.correct_pin))
+        self.assertRaises(ValueError, self.bank_account.withdraw, -300, self.correct_pin)
+        self.assertRaises(ValueError, self.bank_account.withdraw, 100_000, self.correct_pin)
+        self.assertEqual(50_000, self.bank_account.check_balance(self.correct_pin))
+
+
+
 #   throw exception for withdraw using incorrect pin
 
 
