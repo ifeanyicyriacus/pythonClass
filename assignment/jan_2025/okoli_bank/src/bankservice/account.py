@@ -16,7 +16,7 @@ class Account:
         self.__balance = value
 
     def check_balance(self, pin):
-        if self._confirm_pin(pin):
+        if self.confirm_pin(pin):
             return self._balance
         else: raise ValueError('Pin is incorrect')
 
@@ -70,18 +70,18 @@ class Account:
     def update_last_name(self, last_name, pin):
         if last_name is None or last_name == '' or pin is None or pin == '':
             raise ValueError('Last name or pin cannot be empty')
-        if self._confirm_pin(pin):
+        if self.confirm_pin(pin):
             self.last_name = last_name
         else: raise ValueError('Pin is incorrect')
 
 
-    def _confirm_pin(self, pin) -> bool:
+    def confirm_pin(self, pin) -> bool:
         return self._pin == pin
 
     def update_pin(self, old_pin:str, new_pin:str):
         if new_pin is None or new_pin == '':
             raise ValueError('New pin field cannot be empty')
-        if self._confirm_pin(old_pin):
+        if self.confirm_pin(old_pin):
             self._pin = new_pin
         else: raise ValueError('Current pin is incorrect')
 
@@ -90,7 +90,7 @@ class Account:
         self._balance += amount
 
     def withdraw(self, amount:float, pin:str):
-        if not self._confirm_pin(pin): raise ValueError('Pin is incorrect')
+        if not self.confirm_pin(pin): raise ValueError('Pin is incorrect')
         if amount < 0: raise ValueError('Amount cannot be negative')
         if amount > self._balance: raise ValueError('Amount cannot be greater than balance')
         self._balance -= amount
