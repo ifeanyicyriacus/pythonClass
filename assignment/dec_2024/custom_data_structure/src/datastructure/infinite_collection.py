@@ -3,15 +3,23 @@ class InfiniteCollection:
     def __init__(self, capacity):
         self.__size = 0
         self.__capacity = capacity
-        self.__collection = []
+        self.collection = []
 
     @property
     def size(self) -> int:
         return self.__size
 
+    @size.setter
+    def size(self, size: int) -> None:
+        self.__size = size
+
     @property
     def is_empty(self) -> bool:
         return self.__size == 0
+
+    @property
+    def capacity(self) -> int:
+        return self.__capacity
 
     @property
     def is_full(self) -> bool:

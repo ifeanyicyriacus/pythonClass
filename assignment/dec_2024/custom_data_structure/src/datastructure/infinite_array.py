@@ -5,15 +5,15 @@ class InfiniteArray(InfiniteList):
         super().__init__(size)
 
     def add(self, item:object) -> None:
-        if self.is_full:
-            self.collection += [item]
+        if not self.is_full:
+            super().add(item)
         else: raise IndexError("Array capacity reached")
 
     def add_all(self, items:list) -> None:
         for item in items:
             self.add(item)
 
-    def remove_all(self, items:object) -> None:
-        count = self.count(items)
+    def remove_all(self, item:object) -> None:
+        count = self.count(item)
         for _ in range(count):
-            self.collection.remove(items)
+            self.collection.remove(item)

@@ -94,5 +94,3 @@ class Account:
         if amount < 0: raise ValueError('Amount cannot be negative')
         if amount > self._balance: raise ValueError('Amount cannot be greater than balance')
         self._balance -= amount
-
-

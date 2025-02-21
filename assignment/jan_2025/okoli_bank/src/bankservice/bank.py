@@ -1,6 +1,5 @@
 from src.bankservice.account import Account
 
-
 class Bank:
     __account_counter = 1
     __accounts: dict[int: Account] = {}
