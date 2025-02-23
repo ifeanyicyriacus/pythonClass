@@ -38,6 +38,12 @@ class DiaryTestCase(unittest.TestCase):
         self.diary.lock()
         self.assertRaises(ValueError, self.diary.unlock, self.wrong_password)
 
+    def test_diary_can_not_be_unlocked_with_empty_password(self):
+        self.diary.lock()
+        self.assertRaises(ValueError, self.diary.unlock, self.empty)
+        self.assertRaises(ValueError, self.diary.unlock, None)
+
+
     def test_diary_can_not_perform_any_operation_if_diary_is_locked(self):
         self.diary.create_entry(self.titles[0], self.bodies[0])
         self.assertEqual(1, self.diary.number_of_entries)
