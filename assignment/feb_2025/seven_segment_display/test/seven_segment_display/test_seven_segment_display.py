@@ -2,17 +2,17 @@ import unittest
 from src.seven_segment_display.seven_segment_display import SevenSegmentDisplay
 
 class TestSevenSegmentDisplay(unittest.TestCase):
-    ZERO_PROMPT = "11111101"
-    ONE_PROMPT = "01100001"
-    TWO_PROMPT = "11011011"
-    THREE_PROMPT = "11110011"
-    FOUR_PROMPT = "01100111"
-    FIVE_PROMPT = "10110111"
-    SIX_PROMPT = "10111111"
-    SEVEN_PROMPT = "11100001"
-    EIGHT_PROMPT = "11111111"
-    NINE_PROMPT = "11100111"
-    BLANK_PROMPT = "11110110"
+    ZERO_PROMPT     = "11111101"
+    ONE_PROMPT      = "01100001"
+    TWO_PROMPT      = "11011011"
+    THREE_PROMPT    = "11110011"
+    FOUR_PROMPT     = "01100111"
+    FIVE_PROMPT     = "10110111"
+    SIX_PROMPT      = "10111111"
+    SEVEN_PROMPT    = "11100001"
+    EIGHT_PROMPT    = "11111111"
+    NINE_PROMPT     = "11100111"
+    BLANK_PROMPT    = "11110110"
 
     ZERO = [
         ["#", "#", "#", "#"],
