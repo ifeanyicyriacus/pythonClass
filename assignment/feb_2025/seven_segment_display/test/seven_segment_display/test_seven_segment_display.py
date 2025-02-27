@@ -95,3 +95,4 @@ class TestSevenSegmentDisplay(unittest.TestCase):
         self.display = SevenSegmentDisplay()
 
     def test_something(self):
+        pass
