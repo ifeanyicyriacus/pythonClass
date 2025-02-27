@@ -1,5 +1,4 @@
-
-
+import string
 
 class SevenSegmentDisplay:
 
@@ -15,6 +14,13 @@ class SevenSegmentDisplay:
     token = "#"
 
     def enter_prompt(self, prompt:str):
+        for char in prompt:
+            if char in string.printable[10:]:
+                raise ValueError("Only numbers are allowed")
+            if char in string.digits[2:]:
+                raise ValueError("Only zero(0) and one(1) are allowed")
+            if len(prompt) != 8:
+                raise ValueError("Length of input should be exactly 8 characters long")
         self.set_segments_value(prompt)
 
     def set_segments_value(self, prompt:str):

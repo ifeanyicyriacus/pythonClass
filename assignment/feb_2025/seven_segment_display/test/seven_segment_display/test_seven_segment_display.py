@@ -1,4 +1,5 @@
 import unittest
+
 from src.seven_segment_display.seven_segment_display import SevenSegmentDisplay
 
 class TestSevenSegmentDisplay(unittest.TestCase):
@@ -13,6 +14,12 @@ class TestSevenSegmentDisplay(unittest.TestCase):
     EIGHT_PROMPT    = "11111111"
     NINE_PROMPT     = "11100111"
     BLANK_PROMPT    = "11110110"
+
+    PROMPTS_WITH_NON_NUMBER:[]  = ["111A00 1", "1#110011", "11t10011", "1111011}"]
+    PROMPTS_WITH_NON_0_AND_1:[] = ["12345678", "10102021", "00000390", "00000003"]
+    PROMPTS_WITH_MORE_THAN_8_DIGITS:[] = ["101010111", "1111111111", "111010010"]
+    PROMPTS_WITH_LESS_THAN_8_DIGITS:[] = ["111011", "1111111", "10101"]
+
 
     ZERO = [
         ["#", "#", "#", "#"],
@@ -159,3 +166,24 @@ class TestSevenSegmentDisplay(unittest.TestCase):
         actual: [[]] = self.display.get_display()
         print(self.display)
         self.assertListEqual(self.ZERO, actual)
+
+    def test_display_raise_exception_when_prompt_contains_non_numerical_value(self):
+        for i in range(len(self.PROMPTS_WITH_NON_NUMBER)):
+            with self.assertRaises(ValueError):
+                self.display.enter_prompt(self.PROMPTS_WITH_NON_NUMBER[i])
+
+    def test_display_raise_exception_when_prompt_contains_non_zero_or_one_number(self):
+        for i in range(len(self.PROMPTS_WITH_NON_0_AND_1)):
+            with self.assertRaises(ValueError):
+                self.display.enter_prompt(self.PROMPTS_WITH_NON_0_AND_1[i])
+
+    def test_display_raise_exception_when_prompt_contains_more_than_eight_digits(self):
+        for i in range(len(self.PROMPTS_WITH_MORE_THAN_8_DIGITS)):
+            with self.assertRaises(ValueError):
+                self.display.enter_prompt(self.PROMPTS_WITH_MORE_THAN_8_DIGITS[i])
+
+    def test_display_raise_exception_when_prompt_contains_less_than_eight_digits(self):
+        for i in range(len(self.PROMPTS_WITH_LESS_THAN_8_DIGITS)):
+            with self.assertRaises(ValueError):
+                self.display.enter_prompt(self.PROMPTS_WITH_LESS_THAN_8_DIGITS[i])
+
