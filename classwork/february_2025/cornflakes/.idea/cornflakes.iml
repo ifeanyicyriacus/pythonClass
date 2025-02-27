@@ -6,6 +6,5 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.12 (cornflakes)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="seven_segment_display" />
   </component>
 </module>

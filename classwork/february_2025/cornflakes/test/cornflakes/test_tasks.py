@@ -4,6 +4,7 @@ from src.cornflakes.task2 import swap_and_join
 from src.cornflakes.task3 import add_character_to_middle_or_end as add_char
 from src.cornflakes.task4 import sort_text_by_case
 from src.cornflakes.task5 import find_letter_frequency
+from src.cornflakes.task6 import remove_special_characters
 
 
 class Task1Test(unittest.TestCase):
@@ -62,6 +63,7 @@ class Task4Test(unittest.TestCase):
         sample2:str = "aFrIcA"
         actual:str = sort_text_by_case(sample2)
         expected:str = 'FIAarc'
+        self.assertEqual(actual,expected)
 
 
 class Task5Test(unittest.TestCase):
@@ -76,5 +78,17 @@ class Task5Test(unittest.TestCase):
         keyword:str = "o"
         actual:tuple = find_letter_frequency(word, keyword)
         expected:tuple = ('o', 1)
+        self.assertEqual(actual,expected)
+
+class Task6Test(unittest.TestCase):
+    def test_task6_remove_special_characters_function(self):
+        word:str = "he,ll.o"
+        actual:str = remove_special_characters(word)
+        expected:str = "hello"
+        self.assertEqual(actual,expected)
+
+        word:str = "se(mico)lon"
+        actual:str = remove_special_characters(word)
+        expected:str = "semicolon"
         self.assertEqual(actual,expected)
 
