@@ -1,0 +1,2 @@
+read, b'$2b$12$5TpD1uc8b.9j2revo4sCbO6uWXbJ5M3gPrdWTFZjWjluhgGfUOsIK' 
+qwert, b'$2b$12$RMBmJauC1FjH8ZCWYiCsGum5hLonqSZBjS4l0srsJHWrAh7qmlv4K' 
