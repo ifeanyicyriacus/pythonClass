@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../nigeria_state_and_geo_political_zone/.idea/nigeria_state_and_geo_political_zone.iml" filepath="$PROJECT_DIR$/../nigeria_state_and_geo_political_zone/.idea/nigeria_state_and_geo_political_zone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../seven_segment_display/.idea/seven_segment_display.iml" filepath="$PROJECT_DIR$/../seven_segment_display/.idea/seven_segment_display.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tic_tac_toe.iml" filepath="$PROJECT_DIR$/.idea/tic_tac_toe.iml" />
+    </modules>
+  </component>
+</project>
