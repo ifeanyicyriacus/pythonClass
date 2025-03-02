@@ -38,44 +38,44 @@ class SevenSegmentDisplay:
 
     def __set_a(self, state:bool) -> None:
         index = 0
-        while index < 4:
-            self.display[0][index] =  self.token if state else self.display[0][index]
+        while state and index < 4:
+            self.display[0][index] =  self.token
             index += 1
 
     def __set_b(self, state:bool) -> None:
         index = 0
-        while index < 3:
-            self.display[index][3] = self.token if state else self.display[index][3]
+        while state and index < 3:
+            self.display[index][3] = self.token
             index += 1
 
     def __set_c(self, state:bool) -> None:
         index = 2
-        while index < 5:
-            self.display[index][3] = self.token if state else self.display[index][3]
+        while state and index < 5:
+            self.display[index][3] = self.token
             index += 1
 
     def __set_d(self, state:bool) -> None:
         index = 3
-        while index >= 0:
-            self.display[4][index] = self.token if state else self.display[4][index]
+        while state and index >= 0:
+            self.display[4][index] = self.token
             index -= 1
 
     def __set_e(self, state:bool) -> None:
         index = 4
-        while index >= 2:
-            self.display[index][0] = self.token if state else self.display[index][0]
+        while state and index >= 2:
+            self.display[index][0] = self.token
             index -= 1
 
     def __set_f(self, state:bool) -> None:
         index = 2
-        while index >= 0:
-            self.display[index][0] = self.token if state else self.display[index][0]
+        while state and index >= 0:
+            self.display[index][0] = self.token
             index -= 1
 
     def __set_g(self, state:bool) -> None:
         index = 0
-        while index < 4:
-            self.display[2][index] = self.token if state else self.display[2][index]
+        while state and index < 4:
+            self.display[2][index] = self.token
             index += 1
 
     def __toggle_display_on_or_off(self, state:bool) -> None:

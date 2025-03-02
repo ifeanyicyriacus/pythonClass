@@ -12,7 +12,7 @@ class TestSevenSegmentDisplay(unittest.TestCase):
     SIX_PROMPT      = "10111111"
     SEVEN_PROMPT    = "11100001"
     EIGHT_PROMPT    = "11111111"
-    NINE_PROMPT     = "11100111"
+    NINE_PROMPT     = "11110111"
     BLANK_PROMPT    = "11110110"
 
     PROMPTS_WITH_NON_NUMBER:[]  = ["111A00 1", "1#110011", "11t10011", "1111011}"]
@@ -89,7 +89,7 @@ class TestSevenSegmentDisplay(unittest.TestCase):
         ["#", " ", " ", "#"],
         ["#", "#", "#", "#"],
         [" ", " ", " ", "#"],
-        [" ", " ", " ", "#"], ]
+        ["#", "#", "#", "#"], ]
 
     BLANK = [
         [" ", " ", " ", " "],
