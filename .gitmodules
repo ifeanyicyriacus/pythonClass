@@ -1,3 +1,12 @@
 [submodule "assignment/feb_2025/Student-Course-Management-System"]
 	path = assignment/feb_2025/Student-Course-Management-System
 	url = https://github.com/ifeanyicyriacus/Student-Course-Management-System.git
+[submodule "assignment/feb_2025/Student_Course_Management_System"]
+	path = assignment/feb_2025/Student_Course_Management_System
+	url = https://github.com/ifeanyicyriacus/Student_Course_Management_System.git
+[submodule "assignment/feb_2025/sudent_course_management_system"]
+	path = assignment/feb_2025/sudent_course_management_system
+	url = https://github.com/ifeanyicyriacus/sudent_course_management_system.git
+[submodule "assignment/feb_2025/student_course_management_system"]
+	path = assignment/feb_2025/student_course_management_system
+	url = https://github.com/ifeanyicyriacus/student_course_management_system.git
