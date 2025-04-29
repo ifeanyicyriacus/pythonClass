@@ -27,7 +27,7 @@ class Test(TestCase):
     def test_evaluate_multiplications(self):
         sample_1 = ["12"]
         actual = evaluate_multiplications(sample_1)
-        expected = ["12.0"]
+        expected = ["12"]
         self.assertListEqual(actual, expected)
 
         sample_1 = ["2", "*", "2"]
@@ -53,7 +53,7 @@ class Test(TestCase):
     def test_evaluate_division(self):
         sample_1 = ["12"]
         actual = evaluate_divisions(sample_1)
-        expected = ["12.0"]
+        expected = ["12"]
         self.assertListEqual(actual, expected)
 
         sample_1 = ["2", "/", "2"]
@@ -79,7 +79,7 @@ class Test(TestCase):
     def test_evaluate_remainder(self):
         sample_1 = ["12"]
         actual = evaluate_remainders(sample_1)
-        expected = ["12.0"]
+        expected = ["12"]
         self.assertListEqual(actual, expected)
 
         sample_1 = ["10", "%", "2"]
@@ -110,7 +110,7 @@ class Test(TestCase):
     def test_evaluate_additions(self):
         sample_1 = ["12"]
         actual = evaluate_additions(sample_1)
-        expected = ["12.0"]
+        expected = ["12"]
         self.assertListEqual(actual, expected)
 
         sample_1 = ["10", "+", "2"]
@@ -142,7 +142,7 @@ class Test(TestCase):
     def test_evaluate_subtractions(self):
         sample_1 = ["12"]
         actual = evaluate_subtractions(sample_1)
-        expected = ["12.0"]
+        expected = ["12"]
         self.assertListEqual(actual, expected)
 
         sample_1 = ["10", "-", "2"]
